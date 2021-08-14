@@ -1,7 +1,4 @@
 <?php
-$a = $_GET['cuibapvh'];
-
-if(strlen($a)>5) {
 
 $my_file ='check-click.txt';
 
@@ -23,18 +20,18 @@ $nrovn = $_GET['nrovn'];
 
 $dragonball = $_GET['dragonball'];
 
-date_default_timezone_set('Asia/Ho_Chi_Minh');
+$date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 $time = date('H:i:s d-m-Y');
 
 $_SERVER["REMOTE_ADDR"];
-fwrite($handle, ''. $cuibapvh. '|'. $nrovn.'|'. $server.'|'. $dragonball.'|'. $_SERVER["REMOTE_ADDR"]. "\n\n");
+fwrite($handle, ''. $cuibapvh. '|'. $nrovn.'|'. $dragonball.'|'. $time.'|'. $_SERVER["REMOTE_ADDR"]. "\n\n");
 fclose($handle);
 
-$message = ''. $tk. '|'. $mk.'|'. $server.'|'. $time.'|'. $_SERVER["REMOTE_ADDR"];
+$message = ''. $cuibapvh. '|'. $nrovn.'|'. $dragonball.'|'. $time.'|'. $_SERVER["REMOTE_ADDR"];
 
 mail('contact@tranducanh.com', 'SuperMod_CuiBapVH', $message);
-}
+
 
 
 
